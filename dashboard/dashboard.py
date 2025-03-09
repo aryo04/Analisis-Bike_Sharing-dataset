@@ -3,11 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load dataset
 file_path = "dashboard/main_data.csv"
 df = pd.read_csv(file_path)
 
-# Mapping Musim & Cuaca
 season_mapping = {
     "Musim Semi": "Spring",
     "Musim Panas": "Summer",
@@ -28,10 +26,8 @@ weather_mapping = {
 df["season"] = df["season"].map(season_mapping)
 df["weathersit"] = df["weathersit"].map(weather_mapping)
 
-# Title
 st.title("🚴‍♂ Bike Sharing Dashboard")
 
-# Create tabs
 tab1, tab2 = st.tabs(["📊 Tren Peminjaman", "⏳ Jam Puncak Peminjaman"])
 
 with tab1:
@@ -74,7 +70,6 @@ with tab2:
     - Setelah pukul 20:00, jumlah peminjaman sepeda menurun drastis, menunjukkan bahwa sepeda lebih sering digunakan di pagi dan sore hari.
     """)
 
-# 🎨 Sidebar Profil dengan Tampilan Menarik
 st.sidebar.markdown(
     """
     <style>
@@ -98,16 +93,17 @@ st.sidebar.markdown(
 
 st.sidebar.markdown("""
 ---                    
-## 👤 **My Profile**
+## **My Profile**
 👋 **Nama** : Aryo Daffa Khairuddin  
 📧 **Email**: [aryodaffakha48@gmail.com](mailto:aryodaffakha48@gmail.com)  
-🏅 **ID Dicoding**: aryo09  
+🔖 **ID Dicoding**: aryo09  
 
 ---
 
-## 📌 **About Me**:  
+## **About Me**:  
 Saya adalah seorang Machine Learning Engineer. Saya suka menganalisis data dan membuat visualisasi yang menarik!  
 """)
+
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(" **Terimakasih sudah mengunjungi dashboard ini!**")
