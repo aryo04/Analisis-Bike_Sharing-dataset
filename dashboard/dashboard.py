@@ -31,7 +31,7 @@ st.title("🚴‍♂ Bike Sharing Dashboard")
 tab1, tab2 = st.tabs(["📊 Tren Peminjaman", "⏳ Jam Puncak Peminjaman"])
 
 with tab1:
-    st.subheader("📌 Jumlah Peminjaman Sepeda Berdasarkan Musim dan Cuaca")
+    st.subheader("Bagaimana tren peminjaman sepeda berdasarkan musim dan kondisi cuaca?")
     plt.figure(figsize=(10, 5))
     sns.barplot(data=df, x="season", y="cnt", hue="weathersit", ci=None)
     plt.title("Jumlah Peminjaman Sepeda Berdasarkan Musim dan Cuaca")
