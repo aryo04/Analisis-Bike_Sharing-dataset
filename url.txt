@@ -1,1 +1,1 @@
-https://sharebike.streamlit.app/
+https://aryobike.streamlit.app/
